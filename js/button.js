@@ -1,20 +1,20 @@
 
-const newBtn = document.createElement("button") 
-newBtn.id = "btn" 
-newBtn.innerText = "Click Me!"
-
-
-divButton.appendChild(newBtn) 
-
-newBtn.addEventListener('click', function(e){
-    console.log(e.target)
-}) 
 
 const bubble = document.querySelector("#bubble")
 
 bubble.addEventListener('click', function(e){
     console.log("event bubling clicked", e.target)
 }) 
+
+// const newBtn = document.createElement("button") 
+// newBtn.id = "btn" 
+// newBtn.innerText = "Click Me!"
+
+// bubble.appendChild(newBtn) 
+
+// newBtn.addEventListener('click', function(e){
+//     console.log(e.target)
+// })  
 
 
 //Event bubbling 

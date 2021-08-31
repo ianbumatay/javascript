@@ -26,15 +26,29 @@ newForm.addEventListener('submit', handleSubmit)
 function handleSubmit(event){
     event.preventDefault() 
 
+
+
     //event.target.firstElementChild.value
     
     const inputValue = textInput.value
     //console.log(inputValue) 
+    
+    const newUl = document.createElement("ul")
+    const newLi = document.createElement("li")
+    newUl.append(newLi)
+    newLi.innerText += inputValue 
 
-    divNames.innerHTML += 
-    `<ul>
-      <li>${inputValue}</li>
-    </ul>
-    `
+    divNames.append(newUl)
+
+
+
+// Using template literals
+
+    // divNames.innerHTML += 
+
+    // `<ul>
+    //   <li>${inputValue}</li>
+    // </ul>
+    // `
 
 }
