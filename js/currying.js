@@ -46,6 +46,23 @@ const travelTimeBosNyc = getTravelTime(400)
 const travelTimeDcNyc = getTravelTime(200) 
 //=> passing the distance parameter @ 400km and assigning it to a variable travelTimeBosNyc
 
-console.log(travelTimeBosNyc(50), "hours") //=> passing the speed @ 50km/hr
-console.log(travelTimeDcNyc(50),"hours") 
+//console.log(travelTimeBosNyc(50), "hours") //=> passing the speed @ 50km/hr
+//console.log(travelTimeDcNyc(50),"hours")  
+
+
+// Problem 4
+// Singly and doubly invoke 
+
+function addNum(num1, num2){
+    return num1 + num2
+} 
+
+function addNumCurry(num1){
+    return function(num2){
+         return num1 + num2 
+    }
+} 
+
+console.log(addNum(10,20)) 
+console.log(addNumCurry(10)(20))
 

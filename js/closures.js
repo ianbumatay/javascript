@@ -19,6 +19,8 @@
 //  outerFunc("outer parameter")
 
 
+// Write a function that keeps track on how many time it was called and return that number.
+
 function myFunc(){
     let count = 0
 
