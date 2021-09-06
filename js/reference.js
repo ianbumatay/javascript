@@ -13,6 +13,7 @@ console.log("string2", string2)
 
 
 string1 = "Bugoy" 
+console.log("string1", string1) 
 console.log("string2", string2) 
 
 
@@ -26,7 +27,7 @@ var person1 = {
     age: 33
 }
 
-var person2 = person1 
+var person2 = person1 // both are refering to the same object
 
 console.log("person1", person1)
 console.log("person2", person2)
@@ -35,7 +36,7 @@ console.log("person2", person2)
 //
 person1.name = "Bugoy" 
 
-//console.log("person1", person1)
+console.log("person1", person1)
 console.log("person2", person2)
 
 
