@@ -43,7 +43,7 @@ function isPalindrome(string){
 
 }
 
- console.log(isPalindrome("kayak")) 
+ console.log(isPalindrome("madam")) 
 
 // string = "This is a string" 
 // str = string.length 
