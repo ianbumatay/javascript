@@ -23,15 +23,19 @@
 
 function fib(num){
 
-    // initialize the fibonacci sequence you'r going to generate inside an array 
+    // store the fibonacci sequence you'r going to generate inside an array 
     // and initialize the array with the two numbers of the sequence
     const result = [0,1] 
 
     for(let i = 2; i <= num; i++){
+        // push the sum of two numbers
+        // preceding the position of i in the result array 
+        // at the end of the result array
         const prevNum1 = result[i - 1] 
         const prevNum2 = result[i - 2]
         result.push(prevNum1 + prevNum2)
     }
+    // return the last value in the result array
     console.log(result[num])
 
 }
