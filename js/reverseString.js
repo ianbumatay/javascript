@@ -3,10 +3,9 @@
 // Apple 
 
 // Solution 1 
-// 1. turn string into array .split()
-// 2. set to an array variable 
-// 3. reverse the string .reverse() 
-// 4. retrun array to string .join() 
+// 1. turn string into array .split() and set to an array variable 
+// 3. reverse the array of strings .reverse() 
+// 4. return array to string to string data using .join() 
 
 function reverseString(str){
     const arr = str.split("")
@@ -15,4 +14,5 @@ function reverseString(str){
     return str
 } 
 
-console.log(reverseString("Greetings!"))
+console.log(reverseString("Greetings!")) 
+console.log(reverseString("Apple"))
