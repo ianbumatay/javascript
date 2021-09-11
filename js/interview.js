@@ -59,14 +59,38 @@
 
 // Problem squares of sorted array
 
-function sortedSquares(numArray){
-    return numArray.map((e)=> {
-        return e * e
-    }).sort((a,b)=> {
-         return  a - b
-    })
+// function sortedSquares(numArray){
+//     return numArray.map((e)=> {
+//         return e * e
+//     }).sort((a,b)=> {
+//          return  a - b
+//     })
 
-}
+// }
+// console.log(sortedSquares( [-4, -1, 0, 3, 10])) 
+
+//=> [ 0, 1, 9, 16, 100 ] time complexity O(nlogn) 
+
+// Two pointers Approach 
+
+const sortedSquares = (numArray) => {
+    let result = []
+    let start = 0 
+    let end = numArray.length - 1 
+    let position = end 
+
+    while(start <= end){ 
+
+        if(numArray[start] ** 2 > numArray[end] ** 2){
+            result[position--] = numArray[start++] ** 2
+
+        }else{
+            result[position--] = numArray[end--] ** 2
+        }
+    } 
+    return result
+} 
+
 console.log(sortedSquares( [-4, -1, 0, 3, 10])) 
 
-//=> [ 0, 1, 9, 16, 100 ]
+//=> [ 0, 1, 9, 16, 100 ] time complexity O(n) 
