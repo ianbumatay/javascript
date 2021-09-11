@@ -56,3 +56,17 @@
 
 // show() 
 
+
+// Problem squares of sorted array
+
+function sortedSquares(numArray){
+    return numArray.map((e)=> {
+        return e * e
+    }).sort((a,b)=> {
+         return  a - b
+    })
+
+}
+console.log(sortedSquares( [-4, -1, 0, 3, 10])) 
+
+//=> [ 0, 1, 9, 16, 100 ]
