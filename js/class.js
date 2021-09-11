@@ -1,27 +1,27 @@
 
 
-class User {
+// class User {
 
-    constructor(username, email){ // defining properties to the instance
-        //setup properties
-        this.username = username 
-        this.email = email
-    } 
+//     constructor(username, email){ // defining properties to the instance
+//         //setup properties
+//         this.username = username 
+//         this.email = email
+//     } 
 
-    //method
-    login(){ //by using shorthand function the this keyword would be the object instance 
-        console.log(`${this.username} just login`)
+//     //method
+//     login(){ //by using shorthand function the this keyword would be the object instance 
+//         console.log(`${this.username} just login`)
 
-    } 
+//     } 
 
-    logout(){
-        console.log(`${this.username} just logout` )
-    }
-} 
+//     logout(){
+//         console.log(`${this.username} just logout` )
+//     }
+// } 
 
-const ian = new User("Ian", "email@ian.com") // object instance => new object created.
-const jada = new User("Jada", "email@Jada.com") 
-const jade = new User("Jade", "email@jade.com") 
+// const ian = new User("Ian", "email@ian.com") // object instance => new object created.
+// const jada = new User("Jada", "email@Jada.com") 
+// const jade = new User("Jade", "email@jade.com") 
 
 //new key word 
 // creates new empty object {} 
@@ -30,8 +30,8 @@ const jade = new User("Jade", "email@jade.com")
 
 //console.log(jada, jade) 
 
-ian.login() // you have to invoke  when call to execute code 
-jada.logout() 
+// ian.login() // you have to invoke  when call to execute code 
+// jada.logout() 
 
 
 //super() => calls the constructor of the parent class
