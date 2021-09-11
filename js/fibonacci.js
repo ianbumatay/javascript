@@ -1,5 +1,6 @@
 // Fibonacci sequence
 
+// SOLUTION 1
 // var i;
 // var fib = []; // Initialize array!
 
@@ -19,38 +20,58 @@
 // 5 + 8 = 13 
 // 8 + 13 = 21 
 // 13 + 21 = 34 
-// 21 + 34 = 55   
+// 21 + 34 = 55    
 
-function fib(num){
+// SOLUTION 2 
 
-    // store the fibonacci sequence you'r going to generate inside an array 
-    // and initialize the array with the two numbers of the sequence
-    const result = [0,1] 
+function fibonacci(num){ 
 
-    for(let i = 2; i <= num; i++){
-        // push the sum of two numbers
-        // preceding the position of i in the result array 
-        // at the end of the result array
-        const prevNum1 = result[i - 1] 
-        const prevNum2 = result[i - 2]
-        result.push(prevNum1 + prevNum2)
-    }
-    // return the last value in the result array
-    console.log(result[num])
+    const arr = [0,1] 
+    let a, b 
 
-}
+    for(let i = 2; i < num; i++){
+        a = arr[i - 1] 
+        b = arr[i - 2] 
+        arr.push(a + b)
+    } 
+    return arr
+} 
+
+console.log(fibonacci(11))
 
 
-// Recursion
-// function fib(num){  
-// //console.log(num)
 
-//     if(num < 2){
-//         return num 
+
+// function fib(num){
+
+//     // store the fibonacci sequence you'r going to generate inside an array 
+//     // and initialize the array with the two numbers of the sequence
+//     const result = [0,1] 
+
+//     for(let i = 2; i <= num; i++){
+//         // push the sum of two numbers
+//         // preceding the position of i in the result array 
+//         // at the end of the result array
+//         const prevNum1 = result[i - 1] 
+//         const prevNum2 = result[i - 2]
+//         result.push(prevNum1 + prevNum2)
 //     }
-//     return fib( num - 1 ) + fib( num - 2 )
-// } 
+//     // return the last value in the result array
+//     console.log(result[num])
 
-console.log(fib(15)) //=> 610
+// }
+
+
+// // Recursion
+// // function fib(num){  
+// // //console.log(num)
+
+// //     if(num < 2){
+// //         return num 
+// //     }
+// //     return fib( num - 1 ) + fib( num - 2 )
+// // } 
+
+// console.log(fib(15)) //=> 610
 
 
