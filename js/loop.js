@@ -9,17 +9,39 @@
 //     console.log(i)
 // }    
 
-function addUpTo(n){ 
+// function addUpTo(n){ 
 
-    let total = 5
+//     let total = 5 // start to 5 
 
-    for(let i = 0; i <= n; i++){
-        total += i
+//     for(let i = 0; i <= n; i++){
+//         total += i  // 5+1+2+3+4+5+6+7+8+9+10
+//     } 
+//     return total
+// } 
+
+// console.log(addUpTo(10))  
+
+let arr = [1,2,3,4,5,6,7,8,10] 
+
+function findMissingNum(arr){ 
+
+    for(let i = 0; i <= arr.length; i++){
+        if( arr[i] + 1 !== arr[i + 1]){ 
+            console.log(arr[i] + 1) 
+            console.log(arr[i + 1])
+            return arr[i] + 1 
+        }
     } 
-    return total
+    return false
 } 
+console.log(findMissingNum(arr))
 
-console.log(addUpTo(10))
+
+
+
+
+
+
 
 // ForEach 
 
