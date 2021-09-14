@@ -27,15 +27,34 @@
 // strJoin = strReverse.join('') 
 // console.log(strJoin) 
 
+// function isPalindrome(string){ 
+//      var re = /[^A-Za-z0-9]/g  
+//      var strLowerCase = string.toLowerCase()
+//      var string1 = strLowerCase.replace(re, '') 
+
+//      var string2 = string1.split('').reverse().join('') 
+
+//      return string1 === string2
+
+// } 
+
+// console.log(isPalindrome("kayak")) 
+
+// isPalindrom Loop 
+
 function isPalindrome(string){ 
-     var re = /[^A-Za-z0-9]/g  
-     var strLowerCase = string.toLowerCase()
-     var string1 = strLowerCase.replace(re, '') 
 
-     var string2 = string1.split('').reverse().join('') 
+    var re = /[^A-Za-z0-9]/g 
+    string = string.toLowerCase().replace(re, '') 
+    
+    var len = string.length
 
-     return string1 === string2
-
+    for(var i = 0; i <= len/2; i++){ 
+        if(string[i] !== string[len - 1 - i]){
+            return false
+        }
+    }
+    return true
 } 
 
 console.log(isPalindrome("kayak"))
