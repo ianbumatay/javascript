@@ -21,14 +21,47 @@
 
 // Using for loop  
 
-function reverseArray(numbers){ 
+// function reverseArray(numbers){ 
     
-    let newArray = []
+//     let newArray = []
 
-    for(let i = numbers.length - 1; i >= 0; i -- ){
-        newArray.push(numbers[i])
-    }
-    return newArray
+//     for(let i = numbers.length - 1; i >= 0; i -- ){
+//         newArray.push(numbers[i])
+//     }
+//     return newArray
+// } 
+
+// console.log(reverseArray([1,2,3,4,5]))
+
+
+// writing own reverse function 
+
+let numbers = [1,2,3,4,5] 
+            // 0 1 2 3 4 
+
+function reverseNumbers(numbers){
+    let leftIndex = 0 
+    let rightIndex = numbers.length - 1 
+
+    //console.log(rightIndex) 
+
+    while(leftIndex < rightIndex){ // if left index less than right index 
+
+        // swap the elements with the temp variable
+        let tempVar = numbers[leftIndex] 
+        //console.log(tempVar)
+        numbers[leftIndex] = numbers[rightIndex] // set right index to left index
+        //console.log(numbers[leftIndex])
+        numbers[rightIndex] = tempVar  // set temp var to right index
+        console.log(numbers[rightIndex])
+
+       
+        // move variable to the middle 
+        leftIndex ++
+        rightIndex --
+
+    } 
 } 
 
-console.log(reverseArray([1,2,3,4,5]))
+console.log(reverseNumbers(numbers))
+

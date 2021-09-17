@@ -13,3 +13,30 @@ const title = document.getElementById("title")
 
 title.innerText = "Javascript Playground"  
 
+ 
+
+
+const div = document.getElementById("#div") 
+
+window.addEventListener("keydown", move) 
+
+function move (e){
+    if(e.keyCode == 68){
+        //console.log("you press letter D")  
+        div.style.transform = "translate(40vw)"
+
+    }
+} 
+
+document.addEventListener('keydown', function(e) {
+    console.log(e.which)
+  })  
+
+
+  const head = document.querySelector("h1") 
+
+  function headerAttribute(){
+    head.setAttribute("role", "presentation")
+  }
+
+
