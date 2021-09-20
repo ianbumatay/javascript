@@ -35,7 +35,7 @@
 // that is a block created wich creates a seperate scope for declaration created in the block 
 
 
-const; cannot be re declare and cannot be re assign
+//const; cannot be re declare and cannot be re assign
 
 
 // variable declarationss

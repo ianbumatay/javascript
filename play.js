@@ -25,7 +25,40 @@
 
 
 
+// function regular(){
+//     console.log("regular",this)
+// } 
+// regular() 
 
+// const express = function(){
+//     console.log("express", this)
+// } 
+
+// express() 
+
+// const arrow = () => {
+//     console.log("arrow", this)
+// } 
+
+// arrow() 
+
+// inside object literal 
+
+const objTest = { 
+
+    regular(){
+        console.log("regular", this)
+    } 
+
+    // arrowFunc:()=> { 
+    //     console.log("arrow", this)
+    // }
+
+} 
+
+objTest.regular() // will refer to the currrent context. the object itself 
+
+//objTest.arrowFunc() //=> window 
 
 
 

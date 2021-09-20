@@ -1,8 +1,36 @@
-//for loop  
+//for loop    
 
 // for ([initialization]); [condition]; [final-expression]) {
 //     // statement
 //  }
+
+names = ["Jade", "Philip", "ericka", "Pheobe"] 
+
+// using for loop
+for(let i = 0; i < names.length; i++){
+   console.log(names[i]) // iterate every single element return element
+}  
+
+// for of return values
+for(let e of names){
+    console.log(e)
+}
+
+
+// for in returns index number of an element
+for(let e in names ){ 
+    console.log(e)
+}  
+
+// forEach takes in callback function with paramete value,index,array,thisArg
+
+names.forEach((name, index)=> { 
+    console.log(name,index) //=> print out value and index
+})
+
+
+
+
 
 // Print 1 to 10
 // for(let i = 1; i <= 10; i++ ){  
