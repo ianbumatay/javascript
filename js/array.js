@@ -50,13 +50,56 @@
 // }) 
 
 // Adding elements to an array 
-// unshift() and push()  
 
-let withGrandma = names.unshift("Grandma Annie")  
-console.log(withGrandma)
+// unshift() add one or more element in the begining of an array and return new length. 
+// let withGrandma = names.unshift("Grandma Annie")  
+// console.log(withGrandma) 
+
+// let withFam = names.unshift("Daddy","Mommy") 
+// console.log(withFam) 
+
+// console.log(names) // mutate the original array 
+
+// // ,push() add one or more element at the end of an array and return new length. 
+
+// let addFromBehind = names.push("Unle", "Auntie") 
+// console.log(addFromBehind)
+
+// console.log(names) // mutate the original array  
+
+
+// // shift and pop  remove elements from array returns the element that is remove from array, mutate original array
+
+// let removeFirst =  names.shift()
+// console.log(removeFirst) 
+
+// let removeLast = names.pop()
+// console.log(removeLast)
+ 
+
+//console.log(names) // mutate the original array   
+
+// .splice()  arr.splice(start[deleteCount[value,...,valueN]]) 
+
+
+ 
+let stringOfNums = ["one","two","four", "five"] 
+
+console.log(stringOfNums.splice(2, 0, "three")) // insert, returns [] 
+console.log(stringOfNums) 
+
+console.log(stringOfNums.splice(2,1,3)) 
+console.log(stringOfNums)  
+
+console.log(stringOfNums.splice(stringOfNums.length, 0, "six",7,8,9))// adding element from behind
+console.log(stringOfNums) 
+
+console.log(stringOfNums.splice(1,2)) //delete element starting from index given returns the element that is left from array
+console.log(stringOfNums)
 
 
 
+ 
 
 
 
