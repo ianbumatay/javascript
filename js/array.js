@@ -83,20 +83,47 @@
 
 
  
-let stringOfNums = ["one","two","four", "five"] 
+// let stringOfNums = ["one","two","four", "five"] 
 
-console.log(stringOfNums.splice(2, 0, "three")) // insert, returns [] 
-console.log(stringOfNums) 
+// console.log(stringOfNums.splice(2, 0, "three")) // insert, returns [] 
+// console.log(stringOfNums) 
 
-console.log(stringOfNums.splice(2,1,3)) 
-console.log(stringOfNums)  
+// console.log(stringOfNums.splice(2,1,3)) 
+// console.log(stringOfNums)  
 
-console.log(stringOfNums.splice(stringOfNums.length, 0, "six",7,8,9))// adding element from behind
-console.log(stringOfNums) 
+// console.log(stringOfNums.splice(stringOfNums.length, 0, "six",7,8,9))// adding element from behind
+// console.log(stringOfNums) 
 
-console.log(stringOfNums.splice(1,2)) //delete element starting from index given returns the element that is left from array
-console.log(stringOfNums)
+// console.log(stringOfNums.splice(1,2)) //delete element starting from index given returns the element that is left from array
+// console.log(stringOfNums)
+ 
 
+// Search Operation in array  
+
+let fruites = ["Orange", "Apple","Banana","Melon", "Citrus", "Grapes"]
+            //    0        1       2        3         4         5
+
+// indexOf()
+// syntax => indexOf(searchElement[fromIndex]) => returns the index of element 
+// No result == -1 
+// more than 1 matches found, it will return the index of first element found  
+
+let apple = fruites.indexOf("Apple", 0)  //=> 0 is default 
+//console.log(apple) // returns 1
+
+// lastIndexOf()
+// syntax => lastIndexOf(searchElement[fromIndex]) by default array.length - 1 
+
+let melon = fruites.lastIndexOf("Citrus") 
+//console.log(melon)
+
+
+// .includes()
+// syntax => .includes(searchElement[startIndex]) 
+// returns boolean values 
+
+let banana = fruites.includes("Banana",3) // returns false because search started in the index number 3 
+console.log(banana)
 
 
  
