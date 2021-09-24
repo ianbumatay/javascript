@@ -29,10 +29,26 @@ let filterNum = arrOfNums.filter((e)=>{
 //console.log(filterNum) //=> [ 2000, 4300, 3500, 2500 ] returns a new array 
 
 
-// arrayMethod.map()
+// arrayMethod.map() map every single element 
 
-let names = ["Ian", "Jade", "Jada"] 
+let names = ["Ian", "Jade", "Jada"]  
+
+// names.map(function(element, index, array){ 
+//    statement
+// })
 
 names.map((e)=> {
  console.log(e)
-})
+}) 
+
+// create function that square elements in array
+let nums = [3, 4, 2, 1, 5] 
+
+function squareNums(nums){
+
+    return nums.map((num)=> {  
+        return num * num
+    }) 
+}
+
+console.log(squareNums(nums))
