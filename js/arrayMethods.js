@@ -38,8 +38,8 @@ let names = ["Ian", "Jade", "Jada"]
 // })
 
 // names.map((e)=> {
-//  console.log(e)
-// }) 
+//  console.log(e) // returns new array and does not change the original array
+// }thisArg) 
 
 // create function that square elements in array
 let nums = [3, 4, 2, 1, 5] 
@@ -55,12 +55,31 @@ function squareNums(nums){
 //console.log(squareNums(nums)) 
 
 function sortSquaredNums(nums){ 
-    sortedNums = nums.sort()
+    //sortedNums = nums.sort()
     //console.log(squaredNums)  
-    return sortedNums.map((num)=> { 
+    squaredArr = nums.map((num)=> { 
         return num * num
     })
+    return squaredArr.sort((a,b)=> a-b ) // accending
 } 
 
-console.log(sortSquaredNums(nums))
+console.log(sortSquaredNums(nums)) 
+
+//  diplay id and fruite
+
+let fruitesObj = [
+    {id: 1, name: "Banana"}, 
+    {id: 2, name: "Apple"},
+    {id: 3, name: "Orange"}
+] 
+
+function fruitesArr(fruitesObj){
+
+    fruiteName = fruitesObj.map((element)=> {
+        return element.name
+    })
+    return fruiteName
+} 
+
+console.log(fruitesArr(fruitesObj))
 
