@@ -148,5 +148,28 @@ let fruites = ["Orange", "Apple", "Banana", "Grapes"]
      }
  })
 
- console.log(fruites)
+ //console.log(fruites) 
+
+ // sorting object literal 
+
+ let employee = [
+     {id:1, name: "Ian", salary: 10000},
+     {id:1, name: "Jada", salary: 8000},
+     {id:1, name: "Jade", salary: 20000}
+ ] 
+
+ employee.sort((a,b)=> {
+
+    if(a.salary < b.salary){
+        return - 1
+    }
+    if(a.salary > b.salary){
+        return 1
+    }
+    if(a.salary === b.salary){
+        return 0
+    }
+ }) 
+
+ console.log(employee)
 
