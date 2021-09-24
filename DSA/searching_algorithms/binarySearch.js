@@ -11,8 +11,16 @@
     // +> if the value is too large move the right pointer down 
 // if you never find the value return 1 
 
-function BinarySearch(){
+function BinarySearch(arr, element){
     var start = 0 // first element of the array
     var end = arr.length -1 // last element of the array
     var middle = Math.floor((start + end) / 2) // average of start and end Math.floor() to round of the average
-}
+    console.log(start, middle, end)
+
+    while(middle !== element){ // while middle is not equal to the element
+
+    }
+} 
+
+console.log(BinarySearch([2,5,6,9,13,15,28,13], 15)) 
+                    //    S     M           E
