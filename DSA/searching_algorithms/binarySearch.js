@@ -12,27 +12,6 @@
 // if you never find the value return 1  
 
 
-// function binarySearch(arr, elem) {
-//     var start = 0;
-//     var end = arr.length - 1;
-//     var middle = Math.floor((start + end) / 2);
-
-//     while(arr[middle] !== elem && start <= end) {
-//         if(elem < arr[middle]){
-//             end = middle - 1;
-//         } else {
-//             start = middle + 1;
-//         }
-//         middle = Math.floor((start + end) / 2);
-//     }
-//     if(arr[middle] === elem){
-//         return middle;
-//     }
-//     return -1;
-// } 
-
-// binarySearch([2,5,6,9,13,15,28,30], 103)
-
 function BinarySearch(arr, element){
 
     var start = 0 // first element of the array
@@ -44,22 +23,22 @@ function BinarySearch(arr, element){
 
         //console.log(start, middle, end) 
             
-        if(element < arr[middle]){   // if element is less than the middle element in the array
-            end = middle - 1         
+        if(element < arr[middle]){   // if element is less than the middle element in the array (if true )
+            end = middle - 1         //  move middle to the next index(-1 === going left) and assign middle as  new end 
         }else{
-            start = middle + 1
+            start = middle + 1      // else move middle to the next index( 1 === going right) and assign middle as new start
         }
         middle = Math.floor((start + end) / 2)
     }
     //console.log(start, middle, end)
-    if(arr[middle] === element){
-        return middle
+    if(arr[middle] === element){  // if middle is equals to the element we are looking for
+        return middle             // return the index of middle element
      } 
-     return -1
+     return -1                    // else if there is no element found return -1
    
 } 
 
-result = BinarySearch([2,5,6,9,13,15,28,13], 28)
+result = BinarySearch([2,5,6,9,13,15,28,13], 2)
 console.log(result)
                     
                      // 0         3               7
@@ -67,5 +46,6 @@ console.log(result)
                     //  S         M              E 
 
                     //               4    5       7
-                    // [2 , 5, 6, 9, 13, 15, 28, 13]      second loop 
-                    //                S   M      E
+                    // [2 , 5, 6, 9, 13, 15, 28, 13]      second loop  
+                    //                S   M      E 
+// Big0   => worst and average case 0(log n)   best case => 0(1)
