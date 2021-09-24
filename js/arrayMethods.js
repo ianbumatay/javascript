@@ -42,7 +42,7 @@ let names = ["Ian", "Jade", "Jada"]
 // }thisArg) 
 
 // create function that square elements in array
-let nums = [3, 4, 2, 1, 5] 
+//let nums = [3, 4, 2, 1, 5] 
 
 function squareNums(nums){
 
@@ -63,7 +63,7 @@ function sortSquaredNums(nums){
     return squaredArr.sort((a,b)=> a-b ) // accending
 } 
 
-console.log(sortSquaredNums(nums)) 
+//console.log(sortSquaredNums(nums)) 
 
 //  diplay id and fruite
 
@@ -81,5 +81,15 @@ function fruitesArr(fruitesObj){
     return fruiteName
 } 
 
-console.log(fruitesArr(fruitesObj))
+//console.log(fruitesArr(fruitesObj)) 
+
+// .reduce(accumulator, element) 
+
+let nums = [1, 2, 3, 4, 5] 
+
+result = nums.reduce((accumulator, current)=> {
+    return accumulator + current
+}) 
+
+console.log(result)
 
