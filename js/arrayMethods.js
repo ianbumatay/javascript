@@ -83,13 +83,35 @@ function fruitesArr(fruitesObj){
 
 //console.log(fruitesArr(fruitesObj)) 
 
-// .reduce(accumulator, element) 
+// .reduce((accumulator, element, index, array)=> {
+
+//} initial value) initializing the accumulator
 
 let nums = [1, 2, 3, 4, 5] 
 
-result = nums.reduce((accumulator, current)=> {
-    return accumulator + current
+// result = nums.reduce((accumulator, current)=> {
+//     return accumulator + current
+// })  //=> 20
+
+// result = nums.reduce((accumulator, current)=> {
+//     return accumulator + current
+// }, 10) //=> 30 initialize the accumulator starts with 10 you can pass {} or [] as initial value
+
+// console.log(result) 
+
+// getting the average 
+
+let arr = [2, 4, 6, 8 ] 
+
+let avrg = arr.reduce((accumulator, element, index, array)=> { 
+
+    accumulator += element // add accumulator with the current value
+
+    if(index === array.length - 1){ // when it reaches to the final element
+        return accumulator / array.length
+    }
+    return accumulator // return accumulator
 }) 
 
-console.log(result)
+console.log(avrg)
 
