@@ -24,7 +24,7 @@ let findIndexOfNum = arrOfNums.findIndex((e)=> {
 // returns an empty array [] if no element found
 
 let filterNum = arrOfNums.filter((e)=>{
-    return e > 500 //=> return all element that is greater than 500
+    return e > 500 //=> return ann ARRAY of all elements that is greater than 500
 }) 
 //console.log(filterNum) //=> [ 2000, 4300, 3500, 2500 ] returns a new array 
 
@@ -117,17 +117,36 @@ let nums = [1, 2, 3, 4, 5]
 
 // flatten the array using reduce 
 
-let arr = [
-            [1,2,3], 
-            [4,5,6],
-            [7,8,9,10]
-         ] 
-console.log(arr)  
+// let arr = [
+//             [1,2,3], 
+//             [4,5,6],
+//             [7,8,9,10]
+//          ] 
+// console.log(arr)  
 
-let flat = arr.reduce((accumulator, element)=> { 
-    return accumulator.concat(element)
-}) 
+// let flat = arr.reduce((accumulator, element)=> { 
+//     return accumulator.concat(element)
+// },[]) 
 
-console.log(flat)
+// console.log(flat)
 
+// sort() => does not return new array
+// sort((a,b)=> { a - b})  //=> accending order  switch { b - c } for decending
+
+
+let fruites = ["Orange", "Apple", "Banana", "Grapes"]  
+
+ fruites.sort((a,b)=>{
+     if(a < b){
+        return -1 // change to -1 to  1 to sort decending
+     }
+     if(a > b){
+         return 1 // change 1 to -1 for decending
+     }
+     if(a == b){
+         return 0
+     }
+ })
+
+ console.log(fruites)
 
