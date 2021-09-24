@@ -9,7 +9,7 @@ let arrOfNums = [100, 2000, 500, 4300, 3500, 2500]
 let num = arrOfNums.find((element)=>{ 
     return element > 6000  // NO match == undefined
 }) 
-console.log(num) //=> returns the first element found 
+//console.log(num) //=> returns the first element found 
 
 
 // .findIndex() of returns the index of the first element found  
@@ -37,9 +37,9 @@ let names = ["Ian", "Jade", "Jada"]
 //    statement
 // })
 
-names.map((e)=> {
- console.log(e)
-}) 
+// names.map((e)=> {
+//  console.log(e)
+// }) 
 
 // create function that square elements in array
 let nums = [3, 4, 2, 1, 5] 
@@ -47,8 +47,20 @@ let nums = [3, 4, 2, 1, 5]
 function squareNums(nums){
 
     return nums.map((num)=> {  
-        return num * num
-    }) 
-}
+        squared = num * num
+        return squared
+    })   
+} 
 
-console.log(squareNums(nums))
+//console.log(squareNums(nums)) 
+
+function sortSquaredNums(nums){ 
+    sortedNums = nums.sort()
+    //console.log(squaredNums)  
+    return sortedNums.map((num)=> { 
+        return num * num
+    })
+} 
+
+console.log(sortSquaredNums(nums))
+
