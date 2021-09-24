@@ -101,17 +101,33 @@ let nums = [1, 2, 3, 4, 5]
 
 // getting the average 
 
-let arr = [2, 4, 6, 8 ] 
+// let arr = [2, 4, 6, 8 ] 
 
-let avrg = arr.reduce((accumulator, element, index, array)=> { 
+// let avrg = arr.reduce((accumulator, currentElement, index, array)=> { 
 
-    accumulator += element // add accumulator with the current value
+//     accumulator += currentElement // add accumulator with the current value
 
-    if(index === array.length - 1){ // when it reaches to the final element
-        return accumulator / array.length
-    }
-    return accumulator // return accumulator
+//     if(index === array.length - 1){ // when it reaches to the final element
+//         return accumulator / array.length
+//     }
+//     return accumulator // return accumulator
+// }) 
+
+// console.log(avrg) 
+
+// flatten the array using reduce 
+
+let arr = [
+            [1,2,3], 
+            [4,5,6],
+            [7,8,9,10]
+         ] 
+console.log(arr)  
+
+let flat = arr.reduce((accumulator, element)=> { 
+    return accumulator.concat(element)
 }) 
 
-console.log(avrg)
+console.log(flat)
+
 
