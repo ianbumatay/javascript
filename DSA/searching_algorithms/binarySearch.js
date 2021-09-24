@@ -24,9 +24,9 @@ function BinarySearch(arr, element){
         //console.log(start, middle, end) 
             
         if(element < arr[middle]){   // if element is less than the middle element in the array (if true )
-            end = middle - 1         //  move middle to the next index(-1 === going left) and assign middle as  new end 
+            end = middle - 1         //  move middle to the next index(-1 === going left) with the array on the left and assign middle as new end 
         }else{
-            start = middle + 1      // else move middle to the next index( 1 === going right) and assign middle as new start
+            start = middle + 1      // else move middle to the next index( 1 === going right) work with the array on the right and assign middle as new start
         }
         middle = Math.floor((start + end) / 2)
     }
