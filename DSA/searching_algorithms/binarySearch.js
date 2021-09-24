@@ -17,7 +17,13 @@ function BinarySearch(arr, element){
     var middle = Math.floor((start + end) / 2) // average of start and end Math.floor() to round of the average
     console.log(start, middle, end)
 
-    while(middle !== element){ // while middle is not equal to the element
+    while(middle !== element){ // while middle is not equal to the element 
+        if(elemnt < arr[middle]){
+            end = middle - 1
+        }else{
+            start = middle + 1
+        }
+        middle = Math.floor((start + end) / 2)
 
     }
 } 
