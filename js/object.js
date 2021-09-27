@@ -20,18 +20,18 @@ var dog = {
 
 // ---------------  Using new keyword  => Object.new
 
-// const student = Object.new 
+const student = new Object()
 
-// //setting up properties 
-// student.name = "Ian" 
-// student.lastName = "Bumatay"
-// student.gpa = 3
-// student.subjects = ["Math", "Programming", "Algorithm"]
+//setting up properties 
+student.name = "Ian" 
+student.lastName = "Bumatay"
+student.gpa = 3
+student.subjects = ["Math", "Programming", "Algorithm"]
 
-// // methods 
-// student.getSubjects = function(){
-//     return this.subjects
-// } 
+// methods 
+student.getSubjects = function(){
+    return this.subjects
+} 
 
 // -------------- Using a constructor function 
 
@@ -47,10 +47,38 @@ function Car(brand, color, year, engine){  // note: Carc onstructor function sta
 // creating methods
 Car.prototype.getColor = function(){ // 
     return this.color
-} 
+}  
 
-// creating new object 
+Car.prototype.getEngine = function(){
+    return this.engine
+}
+
+// creating a new Car object 
 
 const Rav4 = new Car("Toyota", "Black", "2017", "v4") 
 
-console.log(Rav4)
+console.log(Rav4) 
+console.log(Rav4.getEngine())  
+
+// ----------------- Creating Object using class  
+
+class Cat {
+
+    // setting up properties
+    constructor(name, breed){ 
+        this.name = name 
+        this.breed = breed
+    }  
+
+    // creating methods
+    getName(){
+        return this.name
+    } 
+
+    getBreed(){
+        return this.breed
+    }
+}
+
+
+g
