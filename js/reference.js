@@ -1,6 +1,20 @@
 
 // primative data are pass by values 
-// objects are pass by reference 
+// objects are pass by reference  
+
+// two different obj are not equal to each other 
+
+var obj1 = {
+    name: "mike"
+} 
+
+var obj2 = {
+    name: "mike"
+} 
+
+console.log(obj1 == obj2)  
+console.log(obj1 === obj2) 
+
 
 // Pass by values
 
