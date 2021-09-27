@@ -1,6 +1,6 @@
 // Creating Obj 
 
-// Object Literal syntax 
+// 1.] Object Literal syntax 
 
 var dog = {
     // object properties
@@ -16,4 +16,19 @@ var dog = {
     getName(){
        return this.name
     }
+} 
+
+// 2.] New keyword  => 
+
+const student = Object.new 
+
+//creating properties 
+student.name = "Ian" 
+student.lastName = "Bumatay"
+student.gpa = 3
+student.subjects = ["Math", "Programming", "Algorithm"]
+
+// methods 
+student.getSubjects = function(){
+    return this.subjects
 }
