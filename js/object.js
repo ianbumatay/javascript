@@ -80,5 +80,7 @@ class Cat {
     }
 }
 
-
-g
+// accessing properties and methods
+const garfield = new Cat("Garfield", "Cartoons cat")
+console.log(garfield) 
+console.log(garfield.getBreed())
