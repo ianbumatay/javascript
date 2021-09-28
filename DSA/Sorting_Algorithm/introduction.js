@@ -40,7 +40,7 @@ let fruites = ["Orange", "Apple", "Banana", "Grapes"]
      }
  })
 
- //////////////////// 
+ //////////////////// Sorting an Obj
 
  let employee = [
     {id:1, name: "Ian", salary: 10000},
