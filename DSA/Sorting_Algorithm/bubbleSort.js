@@ -7,7 +7,7 @@
 // if current item is larger than the next item 
 // swap item (larger going to the right) 
 
-// swap funtion 
+////////////// swap funtion implementation
 
 // ES5
 // function swap(temp, currentElement, nextElement){ 
@@ -17,10 +17,11 @@
 // }  
 
 //ES15  swap arrow function
-
 // const swap = (temp, idx1, idx2) => {
 //     [arr[idx1], arr[idx2] = arr[idx2], arr[idx1]]
 // }
+
+///////////////////////
 
 // function bubbleSort(arr){
 
@@ -42,24 +43,31 @@
 // let result = bubbleSort([37, 45, 39, 8])
 // console.log(result) //=> [ 8, 37, 39, 45 ] 
 
-// Bubble sort Optimization 
+/////////////////////////  Bubble sort Optimization 
 
 function OptimizeBubbleSort(arr){  
+ 
+    var noSwaps
 
     for(var i = arr.length; i > 0; i--){  // loop from the end of array toward the beginning
-
+         noSwaps = true
         for(var j = 0; j < i - 1; j++){   // start an inner loop with a variable called j from the beginning until i - 1 (arr.length - 1)
             console.log(arr, arr[j], arr[j + 1])
             if(arr[j] > arr[j+1]){
                 let temp = arr[j]
                 arr[j] = arr[j+1]
                 arr[j+1] = temp
+                noSwaps = false
             }
         }
-        console.log("One pass complete")
+        if(noSwaps) break
+        //console.log("One pass complete")
     }
     return arr 
 } 
 
 let result = OptimizeBubbleSort([37, 45, 39, 8])
-console.log(result) //=> [ 8, 37, 39, 45 ] 
+console.log(result) //=> [ 8, 37, 39, 45 ]  
+
+
+// Big 0 => 2(n) if the array is not sorted and if the array id nearly sorted it would be linear or 0(n)
