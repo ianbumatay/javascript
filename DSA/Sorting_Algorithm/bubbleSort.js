@@ -9,11 +9,18 @@
 
 // swap funtion 
 
+// ES5
 // function swap(temp, currentElement, nextElement){ 
 //     let temp = currentElement
 //     currentIdx = nextElement
 //     nextElement = temp
-// } 
+// }  
+
+//ES15  swap arrow function
+
+// const swap = (temp, idx1, idx2) => {
+//     [arr[idx1], arr[idx2] = arr[idx2], arr[idx1]]
+// }
 
 // function bubbleSort(arr){
 
@@ -37,18 +44,19 @@
 
 // Bubble sort Optimization 
 
-function OptimizeBubbleSort(arr){ 
+function OptimizeBubbleSort(arr){  
 
-    for(var i = arr.length; i > 0; i--){  // arr.length = 4
+    for(var i = arr.length; i > 0; i--){  // loop from the end of array toward the beginning
 
-        for(var j = 0; j < i - 1; j++){ 
-
+        for(var j = 0; j < i - 1; j++){   // start an inner loop with a variable called j from the beginning until i - 1 (arr.length - 1)
+            console.log(arr, arr[j], arr[j + 1])
             if(arr[j] > arr[j+1]){
                 let temp = arr[j]
                 arr[j] = arr[j+1]
                 arr[j+1] = temp
             }
         }
+        console.log("One pass complete")
     }
     return arr 
 } 
