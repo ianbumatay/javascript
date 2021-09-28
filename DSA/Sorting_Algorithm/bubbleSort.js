@@ -9,10 +9,28 @@
 
 // swap funtion 
 
-function swap(temp, currentIdx, nextIdx){ 
+// function swap(temp, currentElement, nextElement){ 
+//     let temp = currentElement
+//     currentIdx = nextElement
+//     nextElement = temp
+// } 
 
-    let temp = currentIdx
-    currentIdx = nextIdx
-    nextIdx = temp
+function bubbleSort(arr){
 
-}
+    for(var i = 0; i < arr.length; i++){     // loop every element in the array starting index 0 (i = 0) to the last element in the array (arr.lenth)
+
+        for(var j = 0; j < arr.length; j++){   // loop every element in array that is not sorted
+
+            if(arr[j] > arr[j + 1]){        // if current element (arr[j])  is greater than next element (arr[j + 1])
+                 // swap                    // swap elements 
+                 let temp = arr[j]
+                 arr[j] = arr[j+1]
+                 arr[j+1] = temp
+            }
+        }
+    }
+    return arr
+} 
+
+let result = bubbleSort([37, 45, 39, 8])
+console.log(result)
