@@ -16,4 +16,6 @@ function insertionSort(arr){
     return arr
 } 
 
-insertionSort([4, 20, 2, 90, 43])
+insertionSort([4, 20, 2, 90, 43]) 
+
+// Big ) => O(n2)  O of n squared
