@@ -4,7 +4,8 @@
 // Iterate is a generic term that means “to repeat” in the context of loops. 
 // A loop will continue to iterate until a specified condition, commonly known as a stopping condition, is met.
 
-
+// i ++ the same with i += 1 incremet count to 1
+// i -- the same with i -= 1 decrement count to 1
 
 //for loop    
 
@@ -50,13 +51,31 @@ function reverseLoop(arr){
 
     for(let i = arr.length - 1; i >= 0; i-- ){
         console.log("index", i, "element", arr[i] ) 
-    }
+    } 
+    console.log(i = arr.length - 1)
 
 } 
 
 //reverseLoop([1, 2, 3, 4, 5]) 
 
-reverseLoop(["A", "B", "C", "D", "E"])
+//reverseLoop(["A", "B", "C", "D", "E"]) 
+
+//-------------------------------------
+// Break keyword
+// Within a loop, the break keyword may be used to exit the loop immediately, continuing execution after the loop body.
+//Here, the break keyword is used to exit the loop when i is greater than 5. 
+
+function breakLoop(num){
+
+    for(let i = 0; i <= num; i++){  
+        if(i > 5){
+            break
+        } 
+        console.log(i)
+    }
+} 
+
+breakLoop(10)
 
 
 
