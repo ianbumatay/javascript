@@ -68,6 +68,7 @@ function reverseLoop(arr){
 function breakLoop(num){
 
     for(let i = 0; i <= num; i++){  
+
         if(i > 5){
             break
         } 
@@ -75,7 +76,22 @@ function breakLoop(num){
     }
 } 
 
-breakLoop(10)
+//breakLoop(10)
+
+//------------------------------ 
+// Nested for loop 
+
+function nestedLoop(arr1, arr2){
+
+    for(let outer = 1; outer < arr1.length; outer++){ 
+        for(let inner = 1; inner < arr2.length; inner++){
+            console.log(outer, inner)
+        }
+
+    }
+} 
+
+nestedLoop([1, 2, 3, 4], ["a", "b", "c", "d"])
 
 
 
