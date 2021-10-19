@@ -39,7 +39,25 @@ function pivot(arr, start = 0, end = arr.length + 1){
 } 
 
 result = pivot([4,8,2,1,5,7,6,3])  
-console.log(result) // should return swapInx = 3
+console.log(result) // should return swapInx = 3 
+
+
+//Quick Sort function 
+
+function quickSort(arr, left = 0, right = arr.length - 1){
+
+    if(left < right){
+        let pivotIndex = pivot(arr, left, right) //=> 3 
+        //left 
+        quickSort(arr, left, pivotIndex-1); 
+        //right 
+        quickSort(arr, right, pivotIndex+1);
+    } 
+    return arr;
+} 
+
+console.log(quickSort([4,8,2,1,5,7,6,3]))
+
 
 
 
