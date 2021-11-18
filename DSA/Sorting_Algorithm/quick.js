@@ -46,7 +46,9 @@ console.log(result) // should return swapInx = 3
 
 function quickSort(arr, left = 0, right = arr.length - 1){
 
-    if(left < right){
+    // stop action to prevent loop
+    if(left < right){ // if left is less than right(true) run the code below
+
         let pivotIndex = pivot(arr, left, right) //=> 3 
         //left 
         quickSort(arr, left, pivotIndex-1); 
